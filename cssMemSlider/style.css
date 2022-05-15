@@ -5,7 +5,7 @@ body{
 #slider { 
     position: relative;
 	text-align: center;
-    top: 10px;
+    margin-top: 10px;
 	margin: 0 auto;
 }
 
@@ -107,4 +107,50 @@ article img{
 
 #slides .image{ 
 	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#text label{ 
+	    animation: translating-in 0.5s;
+}
+
+@media(max-width: 840px){
+		#active{ 
+		margin-top: 3%;
+		margin-left: -3%;
+		text-align: end;
+		position: fixed;
+		width: 100%;
+	}
+
+	#switch1:checked ~ #text label:nth-child(5), 
+	#switch2:checked ~ #text label:nth-child(1),
+	#switch3:checked ~ #text label:nth-child(2),
+	#switch4:checked ~ #text label:nth-child(3),
+	#switch5:checked ~ #text label:nth-child(4){
+		position: fixed;
+		width: 50%;
+	}
+}
+
+@media(max-width: 480px){
+	#active{ 
+		margin-top: 5%;
+		margin-left: 0;
+		text-align: center;
+		float: none;
+		position: fixed;
+		width: 100%;
+	}
+
+	#switch1:checked ~ #text label:nth-child(5), 
+	#switch2:checked ~ #text label:nth-child(1),
+	#switch3:checked ~ #text label:nth-child(2),
+	#switch4:checked ~ #text label:nth-child(3),
+	#switch5:checked ~ #text label:nth-child(4){
+		display: block;
+		padding: 0px;
+		margin: 15% 0 0 0;
+		width: 100%;
+		position: fixed;
+	}
 }
